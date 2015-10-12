@@ -21,7 +21,7 @@
     "rework": "^1.0.1",
     "rework-move-media": "0.0.5",
     "rework-split-media": "0.0.1",
-    "css-stringify": "^2.0.0",
+    "css-stringify": "^2.0.0"
   },
   "dependencies": {
     "clean-up-string": "^1.0.0",
