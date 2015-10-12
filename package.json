@@ -1,0 +1,26 @@
+{
+  "name": "gulp-extract-media-queries",
+  "version": "1.0.0",
+  "description": "Plugin extracts css rules inside of media queries and saves it to separated files.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unlight/gulp-extract-media-queries.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unlight/gulp-extract-media-queries/issues"
+  },
+  "homepage": "https://github.com/unlight/gulp-extract-media-queries#readme",
+  "peerDependencies": {
+    "rework": "^1.0.1",
+    "rework-move-media": "0.0.5",
+    "rework-split-media": "0.0.1",
+    "css-stringify": "^2.0.0",
+  },
+  "dependencies": {
+    "clean-up-string": "^1.0.0",
+    "through2": "^2.0.0"
+  }
+}

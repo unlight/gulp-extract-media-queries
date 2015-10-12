@@ -5,25 +5,48 @@ Plugin extracts css rules inside of media queries and saves it to separated file
 EXAMPLE
 -------
 ```js
+var gulp = require("gulp");
+var g = require("gulp-load-plugins")();
+
 gulp.task("design.build", function() {
-	return gulp.src("src/design/style.css")
+	gulp.src("src/design/style.css")
 		.pipe(g.extractMediaQueries())
 		.pipe(gulp.dest("build"));
 });
 ```
-Task `design.build` for `style.css` for below `style.css` file:
+Task `design.build` for below `style.css` file:
 ``` css
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-Produces 2 files `style.css` and `min-width-640px.css` with following content:
-| style.css | min-width-640px.css
-| ----------|--------------------
-|* {                                 |@media (min-width: 640px) {
-|    -webkit-box-sizing: border-box; |    .container {
-|    -moz-box-sizing: border-box;    |        max-width: 640px;
-|    box-sizing: border-box;         |    }
-|}                                   |}
+@media (min-width: 640px) {
+	.container {
+		margin: 0 auto;
+	}
+}
+```
+Produces following files:
+
+<table>
+	<tr>
+		<th>style.css</th>
+		<th>min-width-640px.css</th>
+	</tr>
+	<tr>
+		<td><pre>* {
+	box-sizing: border-box;
+}</pre></td>
+<td><pre>.container {
+	margin: 0 auto;
+}</pre></td>
+	</tr>
+</table>
+
+And now you can include it in your html in such way:
+```html
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="min-width-640px.css" media="(min-width: 640px)" />
+```
+
+**Note: It will not reduce requests to server, `min-width-640px.css` will be loaded anyway.**
