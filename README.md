@@ -54,5 +54,5 @@ following the normal cascading rules. Style sheets with media queries attached
 to their <link> tags will still download even if their media queries
 would return false (they will not apply, however).
 
-Unless you use the not or only operators,
+Unless you use the `not` or `only` operators,
 the media type is optional and the all type will be implied.
