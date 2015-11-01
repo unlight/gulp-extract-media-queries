@@ -49,4 +49,10 @@ And now you can include it in your html in such way:
 <link rel="stylesheet" type="text/css" href="min-width-640px.css" media="(min-width: 640px)" />
 ```
 
-**Note: It will not reduce requests to server, `min-width-640px.css` will be loaded anyway.**
+When a media query is true, the corresponding style sheet or style rules are applied, 
+following the normal cascading rules. Style sheets with media queries attached 
+to their <link> tags will still download even if their media queries
+would return false (they will not apply, however).
+
+Unless you use the not or only operators,
+the media type is optional and the all type will be implied.
