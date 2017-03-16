@@ -3,12 +3,25 @@
   "version": "1.0.2",
   "description": "Plugin extracts css rules inside of media queries and saves it to separated files.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "mocha": "mocha",
+    "t": "npm run mocha --inline-diffs -- test/*.spec.js",
+    "test:w": "npm run t -- --watch",
+    "test": "npm run t"
+  },
+  "dependencies": {
+    "rework": "^1.0.1",
+    "rework-move-media": "0.0.5",
+    "rework-split-media": "0.0.1",
+    "css-stringify": "^2.0.0",
+    "clean-up-string": "^1.0.0",
+    "through2": "^2.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/unlight/gulp-extract-media-queries.git"
   },
-  "license": "ISC",
+  "license": "XNet",
   "bugs": {
     "url": "https://github.com/unlight/gulp-extract-media-queries/issues"
   },
@@ -17,14 +30,8 @@
     "mediaqueries"
   ],
   "homepage": "https://github.com/unlight/gulp-extract-media-queries#readme",
-  "peerDependencies": {
-    "rework": "^1.0.1",
-    "rework-move-media": "0.0.5",
-    "rework-split-media": "0.0.1",
-    "css-stringify": "^2.0.0"
-  },
-  "dependencies": {
-    "clean-up-string": "^1.0.0",
-    "through2": "^2.0.0"
+  "devDependencies": {
+    "gulp-file": "^0.3.0",
+    "mocha": "^3.2.0"
   }
 }
