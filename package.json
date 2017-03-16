@@ -10,18 +10,18 @@
     "test": "npm run t"
   },
   "dependencies": {
+    "clean-up-string": "^2.0.0",
+    "css-stringify": "^2.0.0",
     "rework": "^1.0.1",
     "rework-move-media": "0.0.5",
     "rework-split-media": "0.0.1",
-    "css-stringify": "^2.0.0",
-    "clean-up-string": "^1.0.0",
     "through2": "^2.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unlight/gulp-extract-media-queries.git"
+    "url": "git+https://github.com/unlight/gulp-extract-media-queries.git"
   },
-  "license": "XNet",
+  "license": "Xnet",
   "bugs": {
     "url": "https://github.com/unlight/gulp-extract-media-queries/issues"
   },
@@ -33,5 +33,8 @@
   "devDependencies": {
     "gulp-file": "^0.3.0",
     "mocha": "^3.2.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
