@@ -1,5 +1,7 @@
 gulp-extract-media-queries
 --------------------------
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/unlight/gulp-extract-media-queries.svg)](https://greenkeeper.io/)
 Plugin extracts css rules inside of media queries and saves it to separated files.
 
 EXAMPLE
